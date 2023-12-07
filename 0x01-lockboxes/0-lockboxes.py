@@ -11,10 +11,10 @@ def canUnlockAll(boxes):
     checked_boxes = set([0])
     unchecked_boxes = set(boxes[0]).difference(set([0]))
     while len(unchecked_boxes) > 0:
-        boxIdx = unchecked_boxes.pop()
-        if not boxIdx or boxIdx >= n or boxIdx < 0:
+        box_idx = unchecked_boxes.pop()
+        if not box_idx or box_idx >= n or box_idx < 0:
             continue
-        if boxIdx not in checked_boxes:
-            unchecked_boxes = unchecked_boxes.union(boxes[boxIdx])
-            checked_boxes.add(boxIdx)
+        if box_idx not in checked_boxes:
+            unchecked_boxes = unchecked_boxes.union(boxes[box_idx])
+            checked_boxes.add(box_idx)
     return n == len(checked_boxes)
