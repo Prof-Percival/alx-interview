@@ -2,6 +2,7 @@
 '''A module for working with lockboxes.
 '''
 
+
 def canUnlockAll(boxes):
     '''Checks if all the boxes in a list of boxes containing the keys
     (indices) to other boxes can be unlocked given that the first
@@ -18,3 +19,4 @@ def canUnlockAll(boxes):
             unchecked_boxes = unchecked_boxes.union(boxes[box_idx])
             checked_boxes.add(box_idx)
     return n == len(checked_boxes)
+
